@@ -8,3 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 export function delay(ms: number) {
 	return new Promise((resolve) => setTimeout(resolve, ms))
 }
+
+export function convertToPlainObject<T>(object: T): T {
+	return JSON.parse(JSON.stringify(object))
+}
